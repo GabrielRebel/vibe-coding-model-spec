@@ -88,7 +88,25 @@ TaskMate is an AI co-pilot for mission-driven productivity that transforms conve
 - **Backend**: Node.js with Express
 - **Database**: SQLite (local storage)
 - **AI**: OpenAI GPT-4 API for conversation
-- **Deployment**: Local development (Phase 1)
+- **Deployment**: Web app → PWA → Cross-platform evolution
+
+### 2.1.1 Platform Evolution Strategy
+**Phase 1: Web App (Weeks 1-3)**
+- React web app accessible on any device browser
+- Desktop-first responsive design
+- Browser notifications via Web API
+- Deploy to Vercel/Netlify for instant access
+
+**Phase 2: Progressive Web App (Week 4)**
+- Add PWA manifest and service worker
+- "Install to home screen" functionality
+- Offline capability for core features
+- Native app-like experience on iOS/Android
+
+**Phase 3: Cross-Platform Native (Optional, Weeks 5-8)**
+- React Native conversion if native features needed
+- True native performance and capabilities
+- App Store/Play Store distribution
 
 ### 2.2 Core Features
 
@@ -113,32 +131,44 @@ TaskMate is an AI co-pilot for mission-driven productivity that transforms conve
 ### 2.3 User Interface
 - **Layout**: Single-page chat interface with task sidebar
 - **Design**: Modern, minimal, professional
-- **Responsive**: Desktop-first (Phase 1)
+- **Responsive**: Mobile-first responsive design (optimized for phone screens)
+- **PWA Ready**: Installable on home screen with app-like experience
 
 ## 3. IMPLEMENTATION PLAN
 
-### 3.1 Phase 1: Core MVP
+### 3.1 Phase 1: Web App MVP (Weeks 1-3)
 - [ ] Set up React + Node.js project structure
 - [ ] Implement chat interface (CHAT-01)
 - [ ] Build task extraction engine (TASK-02)
 - [ ] Create notification system (NOTIFY-03)
+- [ ] Mobile-responsive design implementation
+- [ ] Deploy to Vercel/Netlify for instant access
 
-### 3.2 Phase 2: Mission System
+### 3.2 Phase 2: Progressive Web App (Week 4)
+- [ ] Add PWA manifest (app name, icons, colors)
+- [ ] Implement service worker for offline capability
+- [ ] "Add to home screen" functionality
+- [ ] Test on iOS Safari and Android Chrome
+- [ ] Optimize for mobile performance
+
+### 3.3 Phase 3: Mission System (Weeks 5-6)
 - [ ] Add mission system (MISSION-04)
 - [ ] Goal tracking and checkpoint management
 
-### 3.3 Phase 3: Advanced Features
-- [ ] Timezone intelligence
-- [ ] Natural language time parsing
-- [ ] Mood detection
+### 3.4 Phase 4: Cross-Platform Native (Optional, Weeks 7-10)
+- [ ] React Native conversion if needed
+- [ ] Native push notifications
+- [ ] App Store/Play Store preparation
+- [ ] Advanced native features (if required)
 
 ## 4. CONSTRAINTS & LIMITATIONS
 
 ### 4.1 Technical Constraints
 - No calendar integrations (Phase 1)
 - No natural language time parsing for complex dates
-- Desktop notifications only (no SMS/email)
+- Browser notifications only (no SMS/email) - PWA notifications in Phase 2
 - Local storage only (no cloud sync)
+- Web app first, native features only if needed
 
 ### 4.2 Code Quality Standards
 - **No single file over 300 LOC**
@@ -147,13 +177,13 @@ TaskMate is an AI co-pilot for mission-driven productivity that transforms conve
 - **No PR over 200 LOC**
 
 ### 4.3 Scope Boundaries
-- **In Scope**: Chat interface, task extraction, notifications
-- **Out of Scope**: Team collaboration, calendar sync, mobile app, analytics, mission system (Phase 1)
+- **In Scope**: Chat interface, task extraction, notifications, mobile-responsive design
+- **Out of Scope**: Team collaboration, calendar sync, native app features, analytics, mission system (Phase 1)
 
 ### 4.4 Phase 2+ Exclusion Reasoning
 - ❌ **Calendar Sync**: Requires auth & third-party API → 10+ hrs + error surface
 - ❌ **Goal System**: Adds user state complexity → requires onboarding, gamification logic  
-- ❌ **Mobile Notifications**: Unreliable on many browsers → push to native app phase
+- ❌ **Native App Features**: Complex development → PWA provides 90% of native experience
 - ❌ **Team Collaboration**: Requires user management, permissions → 20+ hrs complexity
 - ❌ **Natural Language Time Parsing**: Edge cases galore → "next Tuesday after the meeting" = nightmare
 
@@ -271,6 +301,8 @@ Scenario: Ambiguous task reference
 - [ ] No file over 300 LOC
 - [ ] Max function size: 20 LOC
 - [ ] Feature modules split (chat.js, task.js, notify.js)
+- [ ] Mobile-responsive design implemented
+- [ ] PWA manifest prepared for Phase 2
 
 ### 8.2 Quality Assurance
 - [ ] Error states handled explicitly
@@ -299,4 +331,4 @@ Scenario: Ambiguous task reference
 
 ---
 
-**Next Steps**: Continue multi-LLM refinement process, then implement Phase 1 MVP 
+**Next Steps**: Continue multi-LLM refinement process, then implement Phase 1 Web App MVP with mobile-first design 
