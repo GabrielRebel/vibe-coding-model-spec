@@ -1,4 +1,4 @@
-# VCMS Context Engineering Starter Kit
+# VCMS Framework
 
 **Transform "Guess and Check" Vibe Coding into Structured, Repeatable Success**
 
@@ -25,7 +25,7 @@ AI: *follows workflow, uses templates, validates requirements*
 Result: Successful, maintainable, scalable projects
 ```
 
-**Your framework transforms the chaotic "guess and check" approach into a structured, repeatable process that works for both humans and AI tools.**
+**VCMS Framework transforms the chaotic "guess and check" approach into a structured, repeatable process that works for both humans and AI tools.**
 
 ---
 
@@ -43,18 +43,18 @@ Result: Successful, maintainable, scalable projects
 - **Common pitfalls** and solutions
 - **Success metrics** and continuous improvement
 
-### **Context Engineering Framework**
-- **Structured context** for AI tools
-- **Validation context** for quality assurance
-- **Decision context** for future interactions
-- **Handoff context** for seamless transitions
+### **VCMS Framework Components**
+- **Structured templates** for consistent documentation
+- **Validation process** for quality assurance
+- **Decision tracking** for future interactions
+- **Handoff system** for seamless transitions
 
 ---
 
-## 📦 **Starter Kit Contents**
+## 📦 **Framework Contents**
 
 ```
-vcms-starter-kit/
+vcms-framework/
 ├── templates/
 │   ├── PRD-Template.md
 │   ├── Model-Spec-Template.md
@@ -75,7 +75,7 @@ vcms-starter-kit/
 
 ---
 
-## 🎯 **Context Engineering Benefits**
+## 🎯 **VCMS Framework Benefits**
 
 ### **For AI Tools (Like Me)**
 - **Clear instructions** - Templates tell me exactly what to build
@@ -101,16 +101,16 @@ vcms-starter-kit/
 
 ### **Option 1: Use Templates for New Project**
 ```bash
-# Download templates
-git clone https://github.com/GabrielRebel/vcms-templates.git
-cd vcms-templates
+# Download framework
+git clone https://github.com/GabrielRebel/vibe-coding-model-spec.git
+cd vibe-coding-model-spec
 
-# Copy to your project
+# Copy templates to your project
 cp templates/*.md your-project/docs/
 ```
 
 ### **Option 2: Follow Complete Workflow**
-1. **Download starter kit**
+1. **Download VCMS Framework**
 2. **Follow 6-step workflow**
 3. **Use TaskMate as example**
 4. **Build your project**
@@ -118,14 +118,14 @@ cp templates/*.md your-project/docs/
 ### **Option 3: AI-Assisted Development**
 ```
 User: "Make me a productivity app"
-AI: "I'll use the VCMS framework. Let me start with the PRD template..."
+AI: "I'll use the VCMS Framework. Let me start with the PRD template..."
 ```
 
 ---
 
 ## 📊 **Success Metrics**
 
-### **Before VCMS (Traditional Approach)**
+### **Before VCMS (Traditional Vibe Coding)**
 - ❌ 70% project abandonment rate
 - ❌ Average 3+ months to MVP
 - ❌ Frequent scope creep
@@ -163,18 +163,18 @@ AI: "I'll use the VCMS framework. Let me start with the PRD template..."
 
 ---
 
-## 🔧 **How It Works**
+## 🔧 **How VCMS Framework Works**
 
-### **Step 1: Context Creation**
-Use templates to create structured context for your project:
+### **Step 1: Template-Based Planning**
+Use templates to create structured documentation for your project:
 - Business requirements (PRD)
 - Technical specifications (Model Spec)
 - Quality validation (Checklist)
 - Decision tracking (Change Log)
 
 ### **Step 2: AI Integration**
-Provide this context to AI tools:
-- Clear, structured information
+Provide this structured context to AI tools:
+- Clear, organized information
 - Validation checkpoints
 - Decision rationale
 - Success metrics
@@ -214,8 +214,8 @@ Enable seamless transitions:
 ## 🤝 **Community & Support**
 
 ### **Get Started**
-- **Templates**: [https://github.com/GabrielRebel/vcms-templates](https://github.com/GabrielRebel/vcms-templates)
-- **Example Project**: TaskMate (included in starter kit)
+- **Framework**: [https://github.com/GabrielRebel/vibe-coding-model-spec](https://github.com/GabrielRebel/vibe-coding-model-spec)
+- **Example Project**: TaskMate (included in framework)
 - **Workflow**: Complete step-by-step guide
 
 ### **Contribute**
@@ -231,9 +231,9 @@ Enable seamless transitions:
 
 ---
 
-## 🎯 **Context Engineering in Action**
+## 🎯 **VCMS Framework in Action**
 
-### **Traditional Approach**
+### **Traditional Vibe Coding**
 ```
 User: "Build me a chat app"
 AI: *starts coding randomly*
@@ -243,10 +243,10 @@ User: "Actually, make it mobile-first"
 AI: *frustrated, starts over again*
 ```
 
-### **VCMS Approach**
+### **VCMS Framework Approach**
 ```
 User: "Build me a chat app"
-AI: "I'll use the VCMS framework. Let me start with the PRD template..."
+AI: "I'll use the VCMS Framework. Let me start with the PRD template..."
 AI: "What's the primary use case? Teams or individuals?"
 User: "Teams"
 AI: "Great, I'll document that. What's the platform priority?"
@@ -259,7 +259,7 @@ AI: "Perfect, I'll add that to the technical constraints..."
 
 ## 📝 **Getting Started Checklist**
 
-- [ ] Download the starter kit
+- [ ] Download the VCMS Framework
 - [ ] Review the workflow document
 - [ ] Study the TaskMate example
 - [ ] Choose your first project
@@ -269,12 +269,12 @@ AI: "Perfect, I'll add that to the technical constraints..."
 
 ---
 
-**Transform your development process from "guess and check" to structured success.**
+**Transform your development process from "guess and check" vibe coding to structured success with VCMS Framework.**
 
-**Ready to get started?** Download the [VCMS Templates](https://github.com/GabrielRebel/vcms-templates) and follow the [workflow guide](Vibe-Coding-Workflow.md).
+**Ready to get started?** Download the [VCMS Framework](https://github.com/GabrielRebel/vibe-coding-model-spec) and follow the [workflow guide](Vibe-Coding-Workflow.md).
 
 ---
 
-**Starter Kit Status**: Production Ready  
+**Framework Status**: Production Ready  
 **Last Updated**: 2025-01-12  
 **Next Release**: v1.1 (Community feedback integration) 
