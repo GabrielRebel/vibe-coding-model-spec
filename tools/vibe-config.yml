@@ -1,0 +1,130 @@
+# Vibe Coding Model Spec - Automated Enforcement Configuration
+# This file transforms your spec from philosophy into executable quality control
+
+version: "2.1.1"
+project: "saas-onboarding-chatbot"
+
+# Core Framework Enforcement
+atomic_actions: true
+mvp_phases:
+  - core
+  - enhancements
+  - production
+
+# Scope Guards - Prevents Overreach
+scope_guards:
+  files: 
+    - "./src/core/"
+    - "./src/components/onboarding/"
+  css_selectors: 
+    - "#onboarding-flow"
+    - "#welcome-step"
+    - "#api-key-input"
+    - "#integration-select"
+  max_files_per_change: 3
+  rollback_threshold: 5
+
+# Dependency Approval System
+dependency_approval: required
+dependency_audit:
+  security_scan: true
+  bundle_impact: true
+  license_check: true
+  maintenance_score: true
+
+# Validation Hooks - The Critical Enhancement
+validation_hooks:
+  pre_codegen: "python enforcement/validate-spec.py ./specs/current_spec.md"
+  pre_commit: "npm run spec-compliance-check"
+  post_codegen: "npm run test-coverage && npm run lighthouse-audit"
+  pre_deploy: "npm run integration-tests && npm run performance-budget"
+
+# Phase-Locked Development
+phases:
+  core:
+    required: true
+    files: ["./src/core/*"]
+    tests: ["unit", "integration"]
+    performance_target: "lighthouse > 85"
+    completion_criteria:
+      - "Core flow works without errors"
+      - "Zero console warnings"
+      - "All tests pass"
+  
+  enhancements:
+    requires: ["core"]
+    files: ["./src/enhancements/*"]
+    approval_required: true
+    completion_criteria:
+      - "Enhancement tests pass"
+      - "No regression in core functionality"
+  
+  production:
+    requires: ["core", "enhancements"]
+    files: ["./src/production/*"]
+    approval_required: true
+    completion_criteria:
+      - "Load testing passes"
+      - "Security audit clean"
+      - "Performance budget met"
+
+# Anti-Hallucination Guards
+anti_hallucination:
+  spec_reference_required: true
+  scope_violation_blocks: true
+  dependency_logging: true
+  change_isolation: true
+
+# Communication Protocols
+communication:
+  escalation_phrases:
+    - "[ACTION REQUIRED]"
+    - "[SCOPE EXPANSION]"
+    - "[DEPENDENCY REQUEST]"
+    - "[APPROVAL NEEDED]"
+    - "[SPEC VIOLATION]"
+  
+  clarification_questions:
+    - "Which specific element?"
+    - "Where is it located?"
+    - "What should happen when...?"
+    - "What's the simplest version?"
+    - "Does this match the spec?"
+
+# Testing Requirements
+testing:
+  coverage_threshold: 80
+  performance_budget:
+    lighthouse_score: 85
+    bundle_size_limit: "200kb"
+    load_time_limit: "3s"
+  
+  regression_guards:
+    core_functionality: true
+    performance_metrics: true
+    accessibility_compliance: true
+
+# Deployment Controls
+deployment:
+  requires:
+    - "spec_validation_passed"
+    - "all_tests_passed"
+    - "performance_budget_met"
+    - "security_scan_clean"
+  
+  rollback_triggers:
+    - "performance_regression"
+    - "functionality_break"
+    - "security_vulnerability"
+
+# Monitoring & Alerts
+monitoring:
+  real_time:
+    - "error_rate"
+    - "performance_metrics"
+    - "user_engagement"
+  
+  alerts:
+    - "spec_violation_detected"
+    - "performance_threshold_exceeded"
+    - "dependency_vulnerability_found" 
