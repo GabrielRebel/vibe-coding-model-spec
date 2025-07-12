@@ -42,6 +42,50 @@
 3. **Simplify**: "What's the most basic version that would help you?"
 4. **Get feedback**: "Does this match what you had in mind?"
 
+## 🔒 **ENFORCEMENT MECHANISMS**
+
+### **Pre-Implementation Validation**
+```bash
+# Run before any coding starts
+python enforcement/validate-spec.py spec.md
+```
+
+**Required Checks:**
+- [ ] Spec has proper ID format (SPEC-UI-001)
+- [ ] All required sections present
+- [ ] Scope boundaries clearly defined
+- [ ] Approval workflow specified
+- [ ] Specific files targeted
+
+### **Phase-Locked Development**
+```yaml
+# .cursor/config.yml
+phases:
+  spec_draft:
+    required: true
+    files: [.cursor/scopes/*.md]
+  user_approval:
+    required: true
+    trigger: "GO!"
+  implementation:
+    requires: [spec_draft, user_approval]
+    max_files: 3
+```
+
+### **Anti-Hallucination Guards**
+```markdown
+## RULE: Dependency Requests
+- AI MUST log: `[DEPENDENCY REQUEST] Add lodash@4.17.0 for SPEC-DATA-02`
+- User MUST reply `APPROVE` or `DENY`
+- No silent additions allowed
+```
+
+### **Rollback Triggers**
+- **3+ files changed** → Alert user
+- **5+ files changed** → Auto-revert and require re-approval
+- **Generic selectors used** → Block commit
+- **No spec reference** → Block commit
+
 ## 1. Core Principles
 
 ### 🎯 **Natural Language Translation**

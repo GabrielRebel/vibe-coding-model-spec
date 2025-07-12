@@ -1,0 +1,76 @@
+{
+  "vibeCoding": {
+    "version": "2.1",
+    "enforcement": {
+      "atomic_edits": true,
+      "auto_spec_draft": true,
+      "require_approval": true,
+      "scope_validation": true
+    },
+    "workflow": {
+      "phases": {
+        "spec_draft": {
+          "required": true,
+          "template": ".cursor/scopes/Feature.md"
+        },
+        "user_approval": {
+          "required": true,
+          "trigger": "GO!"
+        },
+        "implementation": {
+          "requires": ["spec_draft", "user_approval"],
+          "atomic_changes": true
+        }
+      }
+    },
+    "validation": {
+      "pre_commit": {
+        "spec_validation": true,
+        "scope_check": true,
+        "file_targeting": true
+      },
+      "post_commit": {
+        "regression_test": true,
+        "performance_check": true
+      }
+    },
+    "anti_overreach": {
+      "max_files_per_change": 3,
+      "require_specific_selectors": true,
+      "dependency_approval": true,
+      "rollback_threshold": 5
+    },
+    "communication": {
+      "escalation_phrases": [
+        "[ACTION REQUIRED]",
+        "[SCOPE EXPANSION]",
+        "[DEPENDENCY REQUEST]",
+        "[APPROVAL NEEDED]"
+      ],
+      "clarification_questions": [
+        "Which specific element?",
+        "Where is it located?",
+        "What should happen when...?",
+        "What's the simplest version?"
+      ]
+    }
+  },
+  "editor": {
+    "formatOnSave": true,
+    "insertSpaces": true,
+    "tabSize": 2
+  },
+  "files": {
+    "associations": {
+      "*.spec.md": "markdown",
+      "*.vibe": "json"
+    }
+  },
+  "terminal": {
+    "integrated": {
+      "shell": {
+        "windows": "powershell.exe"
+      }
+    }
+  }
+} 
