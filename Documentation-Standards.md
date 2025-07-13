@@ -1,8 +1,41 @@
-# VCMS Documentation Standards
+# Vibe Coding Model System (VCMS) Documentation Standards
 
 **Version**: 2.2.0  
 **Created**: July 13, 2025  
 **Purpose**: Ensure consistent, organized documentation across all VCMS projects
+
+---
+
+## 🚨 **CRITICAL STRUCTURE NOTES - JULY 2025**
+
+### **Success Metrics Status**
+- **CURRENT STATE**: We don't have established success metrics yet
+- **ACTION NEEDED**: Remove or reduce overly ambitious success metrics from documentation
+- **APPROACH**: Focus on functional delivery and user feedback rather than complex metrics
+- **NOTE**: Can include basic metrics (app runs, features work) but avoid enterprise-level KPIs
+
+### **Framework Naming**
+- **CORRECT NAME**: "Vibe Coding Model System" (VCMS) - not just "VCMS"
+- **USAGE**: Use full name in formal documentation, VCMS abbreviation in technical contexts
+- **CONSISTENCY**: Update all documentation to reflect proper naming
+
+### **Project Structure Organization**
+- **CURRENT ISSUE**: TaskMate project is nested inside VCMS framework folder
+- **FUTURE PLAN**: TaskMate should become its own repository when completed
+- **STRUCTURE GOAL**: VCMS should be a clean framework, projects should be separate
+- **DECISION PENDING**: Whether to move project folder out of VCMS folder now or later
+
+### **Documentation Philosophy**
+- **PRINCIPLE**: Smart, definitive documentation over redundant, abstract documentation
+- **APPROACH**: Add, refine, merge, combine, regroup before creating new documentation
+- **AVOID**: Too much abstraction and unnecessary documentation layers
+- **FOCUS**: Practical, actionable documentation that serves immediate needs
+- **PROCESS**: Always evaluate existing documentation before creating new files
+
+### **Local vs GitHub Consistency**
+- **REQUIREMENT**: Ensure local documentation matches GitHub format exactly
+- **PROCESS**: Regular sync checks between local and remote documentation
+- **VALIDATION**: Before any push, verify local structure matches intended GitHub structure
 
 ---
 

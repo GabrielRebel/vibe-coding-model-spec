@@ -1,4 +1,4 @@
-# 🧠 Vibe Coding Model Spec v2.1: "Natural Language to Code Framework"
+# 🧠 Vibe Coding Model System (VCMS) v2.1: "Natural Language to Code Framework"
 
 *Inspired by Sean Grove's "New Code" philosophy and Luke Bechtel's "Vibe Specs"*
 
@@ -189,7 +189,7 @@ graph LR
 **Step 1**: AI always starts by proposing a spec in Markdown (`.cursor/scopes/Feature.md`). Must include:
 
 - **User Problem**: "Why is this needed?"
-- **Success Metrics**: "We succeed if X works without breaking Y."
+- **Functional Goals**: "We succeed if the feature works as intended and solves the user's problem."
 - **Out-of-Scope**: "This will NOT modify legacy components A/B"
 
 **Senior Dev Enhancement - Comprehensive Spec Template**:
@@ -202,10 +202,10 @@ graph LR
 - **Current State**: [What exists now]
 - **Desired State**: [What we want]
 
-### 📊 Success Metrics
-- **Primary**: [Main success indicator with target]
-- **Secondary**: [Supporting metrics]
-- **Acceptance Criteria**: [Specific, testable requirements]
+### 📊 Functional Goals
+- **Primary Goal**: [Main functionality that should work]
+- **User Experience**: [How the user should interact with the feature]
+- **Acceptance Criteria**: [Specific, testable requirements - keep simple]
 
 ### 🏗️ Technical Architecture
 - **Components**: [List of files/components to modify]
@@ -465,9 +465,9 @@ User says "GO!" → AI builds only the modal.
 - **Current State**: 5-step checkout with 3 required fields per step
 - **Desired State**: 3-step checkout with smart field validation
 
-### 📊 Success Metrics
-- **Primary**: Reduce checkout time from 4.2min to 2.1min
-- **Secondary**: Decrease cart abandonment to <45%
+### 📊 Functional Goals
+- **Primary Goal**: Reduce checkout time and improve user experience
+- **User Experience**: Streamlined 3-step process with smart validation
 - **Acceptance Criteria**: 
   - One-click address autocomplete
   - Real-time payment validation
@@ -507,9 +507,9 @@ User says "GO!" → AI builds only the modal.
 - **Current State**: Single large API call loads all dashboard data
 - **Desired State**: Progressive loading with skeleton screens
 
-### 📊 Success Metrics
-- **Primary**: Initial load time <2s, interactive <3s
-- **Secondary**: 95th percentile load time <4s
+### 📊 Functional Goals
+- **Primary Goal**: Improve dashboard loading performance
+- **User Experience**: Fast, responsive dashboard with progressive loading
 - **Acceptance Criteria**: Lighthouse Performance score >90
 
 ### 🏗️ Technical Architecture

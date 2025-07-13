@@ -1,4 +1,4 @@
-# Vibe Coding Model Spec - Changelog
+# Vibe Coding Model System (VCMS) - Changelog
 
 ## [2.2.0] - 2025-07-13
 

@@ -1,4 +1,4 @@
-# VCMS Framework
+# Vibe Coding Model System (VCMS)
 
 **Transform "Guess and Check" Vibe Coding into Structured, Repeatable Success**
 
@@ -6,6 +6,22 @@
 **Created**: 2025-07-12  
 **Last Updated**: 2025-07-13  
 **Status**: Ready for Production
+
+---
+
+## 🚨 **STRUCTURE NOTES - JULY 2025**
+
+### **Project Organization**
+- **CURRENT**: TaskMate project is nested inside VCMS framework folder
+- **FUTURE**: TaskMate will become its own repository when completed
+- **GOAL**: VCMS should be a clean framework, projects should be separate
+- **DECISION**: Evaluate moving project folder out of VCMS folder for cleaner structure
+
+### **Documentation Philosophy**
+- **PRINCIPLE**: Smart, definitive documentation over redundant, abstract documentation
+- **APPROACH**: Add, refine, merge, combine, regroup before creating new documentation
+- **AVOID**: Too much abstraction and unnecessary documentation layers
+- **FOCUS**: Practical, actionable documentation that serves immediate needs
 
 ---
 
