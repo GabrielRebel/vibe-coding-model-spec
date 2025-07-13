@@ -1,14 +1,14 @@
 # Human + AI Vibe Coding Workflow
 
-**Version**: 1.0  
-**Created**: 2025-01-12  
-**Last Updated**: 2025-01-12  
+**Version**: 2.2.0  
+**Created**: 2025-07-12  
+**Last Updated**: 2025-07-13  
 **Status**: Active
 
 ## 📋 **WORKFLOW VERSION HISTORY**
 | Version | Date | Changes | Author |
 |---------|------|---------|---------|
-| 1.0 | 2025-01-12 | Initial workflow creation | VCMS Team |
+| 2.2.0 | 2025-07-13 | Version consistency update and framework cleanup | VCMS Team |
 
 ---
 
@@ -199,7 +199,43 @@ npm install
 cd ../backend
 npm init -y
 npm install express cors dotenv
+
+# Create version control files
+echo "16.20.0" > frontend/.nvmrc
+echo "3.11.0" > backend/.python-version  # If using Python
 ```
+
+#### **5.2 Dependency Management**
+**Follow these steps to prevent conflicts:**
+
+1. **Install dependencies locally only**
+   ```bash
+   # ❌ Never do this
+   npm install -g package-name
+   
+   # ✅ Always do this
+   npm install --save package-name
+   ```
+
+2. **Lock dependency versions**
+   ```bash
+   # Commit lock files to version control
+   git add package-lock.json
+   git add requirements.txt  # If using Python
+   ```
+
+3. **Document specific versions**
+   ```bash
+   # For critical dependencies, use exact versions
+   npm install --save react@18.2.0
+   npm install --save-dev typescript@4.9.5
+   ```
+
+4. **Create environment setup scripts**
+   ```bash
+   # setup.sh (Linux/macOS) or setup.ps1 (Windows)
+   # Document in README how to set up the environment
+   ```
 
 #### **5.2 Project Structure**
 ```
@@ -237,6 +273,16 @@ project-name/
 3. Add validation hooks
 4. Test against specifications
 5. Update Change Log
+
+#### **6.2 Session Management**
+**After each development session**:
+1. Create session summary using template
+2. Document all issues and solutions
+3. Update Change Log with key learnings
+4. Identify next session priorities
+5. Assess context window usage and documentation quality
+
+**Session Summary Template**: `templates/Session-Summary-Template.md`
 
 **Example**: TaskMate implements CHAT-01, TASK-02, NOTIFY-03 sequentially
 
@@ -309,6 +355,228 @@ project-name/
 **Problem**: Adding features outside original scope
 **Solution**: Explicit "What We're NOT Building" sections
 **Example**: TaskMate explicitly excludes team features in Phase 1
+
+### **Pitfall 5: TypeScript Version Conflicts**
+**Problem**: TypeScript 5.x compatibility issues with React Scripts
+**Solution**: Downgrade to TypeScript 4.x or use compatible React Scripts version
+**Example**: TaskMate required TypeScript 4.9.5 for React 18 compatibility
+**Command**: `npm install typescript@4.9.5 --save-dev`
+
+### **Pitfall 6: AJV Module Dependency Issues**
+**Problem**: AJV module errors persisting after clean reinstall
+**Solution**: Explicitly install correct AJV version for React Scripts compatibility
+**Example**: TaskMate required explicit AJV installation to resolve dependency conflicts
+**Command**: `npm install ajv@8.12.0 --save-dev`
+
+---
+
+## 🔧 **TROUBLESHOOTING GUIDE**
+
+### **Error Resolution Protocol**
+**When encountering any error, follow the standardized 5-phase process:**
+
+1. **Error Identification (5 min)** - Capture exact error message and classify type
+2. **Critical Analysis (10 min)** - Research root cause and prioritize investigation
+3. **Solution Development (15 min)** - Test hypotheses and implement fix
+4. **Validation & Testing (10 min)** - Verify fix and check for side effects
+5. **Documentation & Learning (10 min)** - Update guides and capture learnings
+
+**Full protocol**: See `tools/error-resolution-protocol.md`
+
+### **Development Environment Issues**
+
+#### **Dependency Management & Virtual Environments**
+**Purpose**: Prevent dependency conflicts and ensure consistent development environments
+
+**Best Practices**:
+1. **Use package.json for Node.js projects**
+   - Lock dependency versions with package-lock.json
+   - Separate devDependencies from dependencies
+   - Use exact versions for critical packages
+
+2. **Use virtual environments for Python projects**
+   - Create isolated environments per project
+   - Use requirements.txt for dependency tracking
+   - Never install packages globally
+
+3. **Version Management**
+   - Document specific versions in project setup
+   - Use .nvmrc for Node.js version control
+   - Use .python-version for Python version control
+
+**Common Pitfalls**:
+- Installing packages globally instead of locally
+- Not locking dependency versions
+- Mixing different package managers
+- Not documenting environment setup steps
+
+**Solution Steps**:
+```bash
+# Node.js Project Setup
+npm init -y
+npm install --save-dev typescript@4.9.5
+npm install --save react@18.2.0
+npm install --save-dev ajv@8.12.0
+
+# Python Project Setup
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+pip freeze > requirements.txt
+```
+
+#### **Environment Isolation Checklist**
+- [ ] Project has its own directory
+- [ ] Dependencies installed locally (not globally)
+- [ ] Version files documented (.nvmrc, .python-version)
+- [ ] Lock files committed to version control
+- [ ] Environment setup documented in README
+- [ ] CI/CD uses same environment as development
+
+#### **Dependency Version Conflicts**
+**Symptoms**:
+- Different behavior in different environments
+- "Module not found" errors despite installation
+- Inconsistent builds across team members
+
+**Root Cause**: Different versions of same package in different environments
+
+**Solution Steps**:
+1. Delete node_modules and package-lock.json
+2. Clear npm cache: `npm cache clean --force`
+3. Reinstall with exact versions: `npm install`
+4. Document specific versions in troubleshooting guide
+
+#### **Virtual Environment Best Practices**
+**For Node.js**:
+- Use npm or yarn consistently (don't mix)
+- Commit package-lock.json or yarn.lock
+- Use .nvmrc for Node.js version
+- Document minimum Node.js version
+
+**For Python**:
+- Always use virtual environments
+- Use requirements.txt for dependencies
+- Use pip-tools for dependency management
+- Document Python version requirements
+
+**For Mixed Projects**:
+- Separate frontend/backend dependencies
+- Use different package managers per language
+- Document setup steps for each environment
+- Use Docker for consistent environments
+
+#### **TypeScript Version Conflicts**
+**Symptoms**: 
+- TypeScript compilation errors
+- React Scripts compatibility warnings
+- Type definition conflicts
+
+**Root Cause**: React Scripts 5.x requires TypeScript 4.x, not 5.x
+
+**Solution Steps**:
+1. Check current TypeScript version: `npx tsc --version`
+2. If version is 5.x, downgrade: `npm install typescript@4.9.5 --save-dev`
+3. Clear cache: `npm cache clean --force`
+4. Reinstall dependencies: `rm -rf node_modules package-lock.json && npm install`
+
+**Prevention**: Always check React Scripts compatibility before upgrading TypeScript
+
+#### **AJV Module Dependency Issues**
+**Symptoms**:
+- AJV module not found errors
+- Dependency resolution conflicts
+- Clean reinstall doesn't fix the issue
+
+**Root Cause**: React Scripts has specific AJV version requirements
+
+**Solution Steps**:
+1. Remove existing AJV: `npm uninstall ajv`
+2. Install specific version: `npm install ajv@8.12.0 --save-dev`
+3. Clear node_modules: `rm -rf node_modules package-lock.json`
+4. Reinstall: `npm install`
+5. If issue persists: `npm install ajv@8.12.0 --force`
+
+**Prevention**: Document specific dependency versions in project setup
+
+#### **React Scripts Compatibility Matrix**
+| React Scripts Version | TypeScript Version | AJV Version | Node.js Version |
+|----------------------|-------------------|-------------|-----------------|
+| 5.0.1 | 4.9.5 | 8.12.0 | 16.x+ |
+| 4.0.3 | 4.1.2 | 6.12.6 | 14.x+ |
+| 3.4.4 | 3.9.7 | 6.12.6 | 12.x+ |
+
+### **Common Error Messages & Solutions**
+
+#### **"Module not found: Can't resolve 'ajv'"`
+```bash
+# Solution
+npm install ajv@8.12.0 --save-dev
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install
+```
+
+#### **"TypeScript version 5.x is not supported"**
+```bash
+# Solution
+npm install typescript@4.9.5 --save-dev
+npm install @types/node@16 --save-dev
+```
+
+#### **"Cannot find module 'react-scripts'"**
+```bash
+# Solution
+npm install react-scripts@5.0.1 --save-dev
+```
+
+#### **"Module not found: Error: Can't resolve './App'"**
+```bash
+# Solution - Check file structure
+ls src/App.tsx
+# If missing, create App.tsx or fix import in index.tsx
+# This is NOT a dependency issue - it's a file structure issue
+```
+
+### **Development Environment Startup**
+
+#### **Option 1: Automated Startup (Recommended)**
+```powershell
+# From project root directory
+.\start-dev.ps1
+```
+
+This script automatically:
+- Starts both backend and frontend servers
+- Handles port conflicts automatically
+- Provides status monitoring
+- Opens browser when ready
+
+#### **Option 2: Manual Startup**
+1. **Backend Startup**:
+   ```powershell
+   cd "path/to/project/src/backend"
+   npm start
+   ```
+
+2. **Frontend Startup** (in new terminal):
+   ```powershell
+   cd "path/to/project/src/frontend"
+   npm start
+   ```
+
+3. **Port Conflict Resolution**: If port 3000 is occupied, React will prompt for alternative port
+
+### **Environment Setup Checklist**
+- [ ] Node.js version 16.x or higher
+- [ ] TypeScript 4.9.5 (not 5.x)
+- [ ] AJV 8.12.0 explicitly installed
+- [ ] React Scripts 5.0.1
+- [ ] Clean node_modules and package-lock.json
+- [ ] All dependencies installed successfully
+- [ ] App.tsx file exists in src/ directory
+- [ ] Import statements match actual filenames (case-sensitive)
+- [ ] Automated startup script created (start-dev.ps1)
 
 ---
 
@@ -409,6 +677,6 @@ project-name/
 ---
 
 **Workflow Status**: Active  
-**Last Updated**: 2025-01-12  
-**Next Review**: 2025-01-15  
+**Last Updated**: 2025-07-13  
+**Next Review**: 2025-07-20  
 **Document Owner**: VCMS Team 

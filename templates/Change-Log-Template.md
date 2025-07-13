@@ -3,12 +3,12 @@
 **Project Name**: [Your Project Name]  
 **Created**: [Date]  
 **Last Updated**: [Date]  
-**Current Version**: [Version Number]
+**Current Version**: 2.2.0
 
 ## 📋 **TEMPLATE VERSION HISTORY**
 | Version | Date | Changes | Author |
 |---------|------|---------|---------|
-| 1.0 | 2025-01-12 | Initial template creation | VCMS Team |
+| 2.2.0 | 2025-07-13 | Version consistency update | VCMS Team |
 
 ---
 

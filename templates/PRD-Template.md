@@ -1,7 +1,7 @@
 # Product Requirements Document (PRD) Template
 
 **Project Name**: [Your Project Name]  
-**Version**: 1.0  
+**Version**: 2.2.0  
 **Created**: [Date]  
 **Last Updated**: [Date]  
 **Status**: [Draft/In Review/Approved/In Development]
@@ -9,7 +9,7 @@
 ## 📋 **TEMPLATE VERSION HISTORY**
 | Version | Date | Changes | Author |
 |---------|------|---------|---------|
-| 1.0 | 2025-01-12 | Initial template creation | VCMS Team |
+| 2.2.0 | 2025-07-13 | Version consistency update | VCMS Team |
 
 ---
 

@@ -11,12 +11,15 @@ interface Message {
 interface ChatInterfaceProps {
   messages: Message[];
   onSendMessage: (message: string) => void;
+  isLoading?: boolean;
 }
 
-const ChatInterface: React.FC<ChatInterfaceProps> = ({ messages, onSendMessage }) => {
+const ChatInterface: React.FC<ChatInterfaceProps> = ({ messages, onSendMessage, isLoading: externalLoading = false }) => {
   const [inputMessage, setInputMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [internalLoading, setInternalLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  
+  const isLoading = externalLoading || internalLoading;
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -30,10 +33,10 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ messages, onSendMessage }
     e.preventDefault();
     if (!inputMessage.trim() || isLoading) return;
 
-    setIsLoading(true);
+    setInternalLoading(true);
     await onSendMessage(inputMessage.trim());
     setInputMessage('');
-    setIsLoading(false);
+    setInternalLoading(false);
   };
 
   const formatTime = (timestamp: string) => {
