@@ -6,6 +6,42 @@
 
 ---
 
+## 📝 **Session Summaries & Change Logs**
+
+### **Why They Matter**
+- Session summaries and change logs are the backbone of VCMS project continuity.
+- They ensure that every change, improvement, problem, solution, or file/folder move is captured for the next developer—human or AI.
+- No session should end without updating these docs. This is non-negotiable for all contributors.
+
+### **What to Document**
+- **Session Summary**: What was worked on, key decisions, problems encountered, solutions found, and next steps.
+- **Change Log**: Every change made—features added, bugs fixed, refactors, migrations, improvements, and any significant project events.
+- **Moves & Migrations**: Any file/folder moves, renames, or structural changes must be logged.
+- **Improvements**: Process, workflow, or documentation improvements.
+- **Problems & Solutions**: Issues faced and how they were resolved (or if unresolved, what was tried).
+
+### **How to Document**
+- Use the provided templates for both session summaries and change logs.
+- Write clearly and concisely—enough detail for someone new to pick up where you left off.
+- Always include:
+  - Date and session focus
+  - What was attempted and accomplished
+  - Any blockers or unresolved issues
+  - Decisions made and rationale
+  - Next steps or TODOs
+
+### **Checklist: Before Ending Any Session**
+- [ ] Update the session summary with all key activities and learnings
+- [ ] Log all changes, moves, and improvements in the change log
+- [ ] Document any problems and their solutions (or attempted solutions)
+- [ ] Leave clear notes for the next developer (human or AI)
+- [ ] Commit and push documentation updates
+
+**Remember:**
+> If it’s not documented, it didn’t happen. Every session, every change, every problem—write it down before you stop. This is how VCMS ensures seamless handoff and continuous improvement.
+
+---
+
 ## 🚨 **CRITICAL STRUCTURE NOTES - JULY 2025**
 
 ### **Success Metrics Status**
@@ -20,10 +56,7 @@
 - **CONSISTENCY**: Update all documentation to reflect proper naming
 
 ### **Project Structure Organization**
-- **CURRENT ISSUE**: TaskMate project is nested inside VCMS framework folder
-- **FUTURE PLAN**: TaskMate should become its own repository when completed
-- **STRUCTURE GOAL**: VCMS should be a clean framework, projects should be separate
-- **DECISION PENDING**: Whether to move project folder out of VCMS folder now or later
+- For ongoing project structure and migration notes, see `FUTURE-IMPROVEMENTS.md`.
 
 ### **Documentation Philosophy**
 - **PRINCIPLE**: Smart, definitive documentation over redundant, abstract documentation

@@ -172,3 +172,7 @@
 - **Pattern Recognition**: Identify recurring issues and solutions
 - **Process Improvement**: Continuous refinement of development workflows
 - **Context Preservation**: Maintain project context across sessions 
+
+---
+
+> If a major migration or folder move occurred, reference the Folder Move Checklist and document any unique issues or lessons learned. 

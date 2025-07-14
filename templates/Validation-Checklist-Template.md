@@ -1,5 +1,7 @@
 # Validation Checklist Template
 
+> **Note:** This template can be merged with the Project Progress template for a combined status/validation doc, as demonstrated in TaskMate. See also the Project-Status template for an example of this approach.
+
 **Project Name**: [Your Project Name]  
 **Version**: 2.2.0  
 **Created**: [Date]  

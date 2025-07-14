@@ -1,4 +1,6 @@
-# Model/Technical Specification Template
+# Model Spec Template
+
+> **Note:** For best results, keep the model spec in the project docs/ folder and reference it in the documentation map.
 
 **Project Name**: [Your Project Name]  
 **Version**: 2.2.0  

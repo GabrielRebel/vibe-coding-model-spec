@@ -1,6 +1,6 @@
 # Vibe Coding Model System (VCMS)
 
-**Transform "Guess and Check" Vibe Coding into Structured, Repeatable Success**
+**This README is your map to the VCMS system. For detailed process, workflow, and standards, see the referenced documents below.**
 
 **Version**: 2.2.0  
 **Created**: 2025-07-12  
@@ -12,10 +12,7 @@
 ## 🚨 **STRUCTURE NOTES - JULY 2025**
 
 ### **Project Organization**
-- **CURRENT**: TaskMate project is nested inside VCMS framework folder
-- **FUTURE**: TaskMate will become its own repository when completed
-- **GOAL**: VCMS should be a clean framework, projects should be separate
-- **DECISION**: Evaluate moving project folder out of VCMS folder for cleaner structure
+- For ongoing project structure and migration notes, see `FUTURE-IMPROVEMENTS.md`.
 
 ### **Documentation Philosophy**
 - **PRINCIPLE**: Smart, definitive documentation over redundant, abstract documentation
@@ -49,7 +46,7 @@ Result: Successful, maintainable, scalable projects
 
 ### **4 Professional Templates**
 - **PRD Template** - Business requirements and user needs
-- **Model Spec Template** - Technical implementation and constraints
+- **Model System Spec Template** - Technical implementation and constraints
 - **Validation Checklist** - Pre-build quality assurance
 - **Change Log Template** - Decision tracking and learnings
 
@@ -79,7 +76,7 @@ vcms-framework/
 ├── workflow/
 │   └── Vibe-Coding-Workflow.md
 ├── examples/
-│   └── taskmate/
+│   └── taskmate-standalone/
 │       ├── docs/
 │       │   ├── PRD.md
 │       │   ├── Validation-Checklist.md
@@ -141,17 +138,7 @@ AI: "I'll use the VCMS Framework. Let me start with the PRD template..."
 
 ## 📊 **Success Metrics**
 
-### **Before VCMS (Traditional Vibe Coding)**
-- ❌ 70% project abandonment rate
-- ❌ Average 3+ months to MVP
-- ❌ Frequent scope creep
-- ❌ Poor handoffs between team members
-
-### **After VCMS (Structured Approach)**
-- ✅ 90% project completion rate
-- ✅ Average 2 weeks to MVP
-- ✅ <10% scope creep
-- ✅ Seamless AI-to-AI handoffs
+*We are working on establishing real success metrics for VCMS. For now, our focus is on functional delivery, user feedback, and continuous improvement. Stay tuned for updates as we gather more data from real-world projects!*
 
 ---
 
@@ -293,4 +280,4 @@ AI: "Perfect, I'll add that to the technical constraints..."
 
 **Framework Status**: Production Ready  
 **Last Updated**: 2025-07-13  
-**Next Release**: v1.1 (Community feedback integration) 
+**Next Release**: v2.2.1 (Community feedback integration) 

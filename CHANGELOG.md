@@ -12,6 +12,9 @@
 - **Dependency Management Guide**: Comprehensive guide for Node.js and Python projects
 - **PowerShell Troubleshooting**: Documented PowerShell limitations and workarounds
 - **Multi-Provider AI Patterns**: Documented AI integration best practices from TaskMate implementation
+- Dedicated section in Documentation Standards for session summaries and change logs, with clear expectations for all contributors (human and AI).
+- Clarified README as a "map" to the VCMS system, not a process doc.
+- Synchronized version numbers across all core docs (README, Workflow, Model System Spec, Documentation Standards).
 
 ### Enhanced
 - **Workflow Updates**: Added session management and documentation requirements
@@ -24,6 +27,10 @@
 - **Error Handling**: Improved error resolution procedures and documentation
 - **Template Usage**: Clarified when and how to use each template type
 - **Environment Configuration**: Documented .env loading and API key management patterns
+- Removed outdated or redundant success metrics and project structure notes.
+- Eliminated all "Senior Dev" persona language from Model System Spec.
+- Clarified that session summaries are not required for VCMS except for major retrospectives; Change Log remains the canonical record for framework changes.
+- Improved guidance on documentation handoff and session wrap-up.
 
 ### Project Success
 - **TaskMate MVP**: Successfully delivered functional AI productivity assistant

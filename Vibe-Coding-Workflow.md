@@ -235,7 +235,7 @@ echo "3.11.0" > backend/.python-version  # If using Python
    ```bash
    # setup.sh (Linux/macOS) or setup.ps1 (Windows)
    # Document in README how to set up the environment
-   ```
+```
 
 #### **5.2 Project Structure**
 ```

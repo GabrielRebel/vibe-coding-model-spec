@@ -1,5 +1,7 @@
 # Change Log Template
 
+> **Note:** For project moves or migrations, see the Folder Move Checklist template for best practices and documentation requirements.
+
 **Project Name**: [Your Project Name]  
 **Created**: [Date]  
 **Last Updated**: [Date]  

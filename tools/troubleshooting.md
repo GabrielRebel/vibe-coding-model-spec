@@ -163,7 +163,7 @@ Before starting any VCMS project:
 
 For detailed troubleshooting steps, see:
 - [Vibe-Coding-Workflow.md](../Vibe-Coding-Workflow.md#troubleshooting-guide)
-- [TaskMate Change Log](../projects/taskmate/docs/Change-Log.md#what-didnt-work)
+- [TaskMate Change Log](../../taskmate-standalone/docs/Change-Log.md#what-didnt-work)
 
 ---
 
